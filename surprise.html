@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Surprise Page</title>
+    <style>
+        body {
+            background-color: #333; /* Warna latar belakang */
+            background-image: url('Pointing.png');
+            color: white; /* Warna teks */
+            font-family: 'Arial', sans-serif; /* Jenis font */
+            text-align: center; /* Meratakan teks ke tengah */
+            margin: 0; /* Menghilangkan margin default */
+            padding: 20px; /* Padding di sekitar konten */
+        }
+
+        h1 {
+            font-size: 48px; /* Ukuran font untuk h1 */
+        }
+
+        p {
+            font-size: 18px; /* Ukuran font untuk p */
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 10px 20px;
+            font-size: 16px;
+            color: white;
+            background-color: #4CAF50; /* Warna latar belakang tombol */
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            text-decoration: none; /* Menghilangkan garis bawah */
+            transition: background-color 0.3s ease; /* Efek transisi untuk perubahan warna */
+        }
+
+        .btn:hover {
+            background-color: #45a049; /* Warna latar belakang tombol saat hover */
+        }
+
+        .btn-straight {
+            position: absolute; /* Mengatur posisi tombol secara absolut */
+        }
+    </style>
+</head>
+<body>
+    <h1>Heyy!</h1>
+    <p>Congratulations! You read this then you're now gay.</p>
+    <a href="index.html" class="btn">Yes I am gay (Back to Home)</a>
+    <button class="btn btn-straight" onclick="moveButton()">No, I am straight</button>
+
+    <script>
+        function moveButton() {
+            var button = document.querySelector('.btn-straight');
+            var maxX = window.innerWidth - button.offsetWidth;
+            var maxY = window.innerHeight - button.offsetHeight;
+            var randomX = Math.floor(Math.random() * maxX);
+            var randomY = Math.floor(Math.random() * maxY);
+            button.style.left = randomX + 'px';
+            button.style.top = randomY + 'px';
+        }
+
+        // Inisialisasi posisi awal tombol "No, I am straight"
+        document.addEventListener("DOMContentLoaded", function() {
+            moveButton();
+        });
+    </script>
+</body>
+</html>

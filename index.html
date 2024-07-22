@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contoh Pengaturan Teks</title>
+    <style>
+        .background-container {
+            position: relative;
+            width: 100%;
+            height: 100vh;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .background-container::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: #000; /* Latar belakang hitam */
+            z-index: 1;
+        }
+
+        .background-container::after {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url('Skull.png'); /* Menambahkan gambar latar belakang */
+            background-size: cover; /* Menyesuaikan ukuran gambar agar menutupi seluruh elemen */
+            background-position: center center; /* Menempatkan gambar di tengah elemen */
+            background-repeat: no-repeat; /* Mencegah gambar diulang */
+            opacity: 0.5; /* Mengatur opasitas gambar */
+            z-index: 2; /* Menempatkan gambar di atas latar belakang hitam */
+        }
+
+        .content {
+            position: relative;
+            z-index: 3;
+            color: white; /* Warna teks default */
+            font-family: 'Arial', sans-serif; /* Jenis font */
+            text-align: center; /* Meratakan teks ke tengah */
+        }
+
+        h1 {
+            color: #ffffff; /* Warna teks h1 */
+            font-size: 48px; /* Ukuran font untuk h1 */
+            font-weight: 700; /* Berat font tebal */
+            margin: 0; /* Menghilangkan margin default */
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Bayangan teks */
+        }
+
+        p {
+            color: #e8e8e8; /* Warna teks p */
+            font-size: 18px; /* Ukuran font untuk p */
+            line-height: 1.6; /* Tinggi baris untuk keterbacaan */
+            margin: 10px 0 0; /* Jarak atas 10px, menghilangkan margin bawah */
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5); /* Bayangan teks */
+        }
+
+        .btn {
+            margin-top: 20px; /* Jarak atas 20px untuk memisahkan dari paragraf */
+            padding: 10px 20px; /* Padding tombol */
+            font-size: 16px; /* Ukuran font untuk tombol */
+            color: white; /* Warna teks tombol */
+            background-color: #4CAF50; /* Warna latar belakang tombol */
+            border: none; /* Menghilangkan border tombol */
+            border-radius: 5px; /* Membulatkan sudut tombol */
+            cursor: pointer; /* Menampilkan kursor tangan pada hover */
+            transition: background-color 0.3s ease; /* Efek transisi untuk perubahan warna */
+        }
+
+        .btn:hover {
+            background-color: #45a049; /* Warna latar belakang tombol saat hover */
+        }
+    </style>
+</head>
+<body>
+    <div class="background-container">
+        <div class="content">
+            <h1>Hello My Friends!!!</h1>
+            <p>If you read this you've to</p>
+            <p>Give me Gopay Rp.2.000!</p>
+            <button class="btn" onclick="window.location.href='surprise.html';">Click Me For Surprise!</button>
+        </div>
+    </div>
+</body>
+</html>
